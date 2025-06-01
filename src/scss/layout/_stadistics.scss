@@ -1,0 +1,30 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.stadistics {
+  background-color: $blue;
+  padding: 16px;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 100px;
+  &__title {
+    font-size: 20px;
+    color: $white;
+    margin-bottom: 30px;
+  }
+  &__item {
+    margin-bottom: 30px;
+    &__number {
+      font-size: 30px;
+      color: $white;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    &__description {
+      font-size: 16px;
+      font-weight: 300;
+      color: $white;
+    }
+  }
+}

@@ -1,2 +1,36 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
+
+.header_principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+  position: sticky;
+  top: 0;
+  background-color: $white;
+  padding: 20px 20px;
+  border-radius: 20px;
+
+  &__logo img {
+    width: 100px;
+    padding-top: 5px;
+  }
+  &__nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+
+    a {
+      text-decoration: none;
+      font-size: 10px;
+      transition: font-size 0.5s ease, color 0.5s ease;
+
+      &:hover {
+        color: $blue;
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.metodologia {
+  margin-bottom: 100px;
+  &__image {
+    width: 100%;
+    margin-bottom: 30px;
+    box-shadow: 0px 8px 20px rgba(108, 165, 176, 0.4);
+  }
+  &__content {
+    text-align: center;
+    &__title {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    .button-blue {
+      text-align: center;
+      font-size: 16px;
+      &:hover {
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -1,2 +1,16 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
+
+.button-blue {
+  @include butttons();
+  background-color: $blue;
+  color: $white;
+  font-size: 10px;
+  font-weight: 700;
+  transition: background-color 0.5s ease, color 0.5s ease, font-size 0.5s ease;
+  &:hover {
+    background-color: $black;
+    color: $blue;
+    font-size: 12px;
+  }
+}
