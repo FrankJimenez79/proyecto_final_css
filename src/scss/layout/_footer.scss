@@ -1,2 +1,32 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
+
+.footer {
+  background-color: $white;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    width: 100px;
+  }
+  &__redes {
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    a {
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: translateY(-10px);
+      }
+      img {
+        background-color: black;
+        border-radius: 50%;
+        padding: 10px;
+      }
+    }
+  }
+  &__aviso {
+    text-decoration: none;
+  }
+}

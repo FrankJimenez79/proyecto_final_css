@@ -4,3 +4,14 @@
 .container {
   padding: 20px;
 }
+
+.container-principal {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint(tablet) {
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -8,6 +8,7 @@
   text-align: center;
   padding-top: 30px;
   margin-bottom: 100px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   &__title {
     font-size: 20px;
     color: $white;
@@ -22,6 +23,8 @@
       margin-bottom: 10px;
     }
     &__description {
+      font-family: $secondary-font;
+
       font-size: 16px;
       font-weight: 300;
       color: $white;
