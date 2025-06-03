@@ -10,10 +10,14 @@
   top: 0;
   background-color: $white;
   padding: 20px 20px;
+  @include breakpoint(desktop) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
   &__logo img {
     width: 100px;
-    padding-top: 5px;
+
     @include breakpoint(tablet) {
       width: 150px;
     }
@@ -22,6 +26,9 @@
     list-style: none;
     display: flex;
     gap: 8px;
+    @include breakpoint(desktop) {
+      gap: 30px;
+    }
 
     a {
       text-decoration: none;
@@ -44,10 +51,18 @@
   }
   .button-blue {
     font-family: $secondary-font;
+    padding-left: 10px;
+    padding-right: 10px;
 
     font-size: 12px;
     @include breakpoint(tablet) {
       font-size: 16px;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    @include breakpoint(desktop) {
+      padding-left: 20px;
+      padding-right: 20px;
     }
     &:hover {
       font-size: 14px;

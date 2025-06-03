@@ -9,6 +9,9 @@
   align-items: center;
   &__logo {
     width: 100px;
+    @include breakpoint(tablet) {
+      width: 150px;
+    }
   }
   &__redes {
     display: flex;
@@ -20,9 +23,13 @@
         transform: translateY(-10px);
       }
       img {
+        width: 30px;
         background-color: black;
         border-radius: 50%;
         padding: 10px;
+        @include breakpoint(tablet) {
+          width: 40px;
+        }
       }
     }
   }

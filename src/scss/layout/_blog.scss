@@ -25,6 +25,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
+      @include breakpoint(desktop) {
+        gap: 50px;
+      }
     }
     &__article {
       background-color: $white;
@@ -32,7 +35,7 @@
       padding: 16px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       @include breakpoint(tablet) {
         display: flex;
         flex-direction: column;
