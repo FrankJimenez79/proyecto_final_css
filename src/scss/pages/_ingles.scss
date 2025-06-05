@@ -6,7 +6,7 @@
   &__title {
     text-align: center;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
     span {
       font-size: 24px;
@@ -42,6 +42,70 @@
     iframe {
       max-width: 100%;
       border-radius: 20px;
+    }
+  }
+}
+
+.ingles-metodo {
+  margin-bottom: 50px;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    &__image {
+      width: 100px;
+    }
+    &__title {
+      font-family: $secondary-font;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 22px;
+    }
+    &__subtitle {
+      font-family: $secondary-font;
+      font-size: 18px;
+    }
+  }
+}
+
+.ingles-conoce-andy {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    justify-content: center;
+    &__title {
+      font-weight: 700;
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      font-family: $secondary-font;
+      font-size: 18px;
+    }
+    .button-blue {
+      font-size: 16px;
+      &:hover {
+        font-size: 18px;
+      }
+    }
+  }
+  &__image {
+    img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0px 8px 20px rgba(108, 165, 176, 0.4);
     }
   }
 }
