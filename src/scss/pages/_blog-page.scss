@@ -1,0 +1,87 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.blog-hero {
+  margin-bottom: 50px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+  &__subtitle {
+    font-family: $secondary-font;
+    color: $blue;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 40px;
+  }
+}
+
+.blog-content {
+  .container {
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @include breakpoint(desktop) {
+      gap: 50px;
+    }
+  }
+  &__article {
+    text-align: center;
+    background-color: $white;
+    border-radius: 30px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__image {
+      width: 100%;
+      border-radius: 30px;
+      margin-bottom: 20px;
+    }
+    &__title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      font-family: $secondary-font;
+
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .button-blue {
+      width: max-content;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 10px;
+      @include breakpoint(tablet) {
+        font-size: 22px;
+      }
+      &:hover {
+        font-size: 18px;
+        @include breakpoint(tablet) {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}

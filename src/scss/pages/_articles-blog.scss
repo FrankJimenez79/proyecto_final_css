@@ -1,0 +1,74 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.article-blog-header {
+  margin-bottom: 50px;
+  .container {
+    background-color: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  &__title {
+    font-size: 36px;
+
+    font-weight: 900;
+  }
+  &__subtitle {
+    font-family: $secondary-font;
+    color: $white;
+    font-size: 20px;
+  }
+  &__fecha {
+    font-family: $secondary-font;
+    color: $white;
+  }
+  .button-blue {
+    background-color: $white;
+    color: $black;
+    font-size: 16px;
+
+    &:hover {
+      font-size: 18px;
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+
+.article-blog-content {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 50px;
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+    }
+  }
+  &__image {
+    img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0px 8px 20px rgba(108, 165, 176, 0.4);
+      @include breakpoint(desktop) {
+        height: 500px;
+        object-fit: cover;
+      }
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    &__article {
+      font-family: $secondary-font;
+      &:first-child {
+        font-weight: 700;
+      }
+    }
+  }
+}
