@@ -9,7 +9,7 @@
     font-size: 26px;
     font-weight: 700;
     span {
-      font-size: 24px;
+      font-size: 26px;
       color: $blue;
     }
     margin-bottom: 20px;
@@ -23,8 +23,25 @@
 
 .ingles-hero {
   margin-bottom: 50px;
+  .container {
+    @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+    @include breakpoint(desktop) {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      align-items: center;
+    }
+  }
   &__content {
     margin-bottom: 30px;
+    @include breakpoint(desktop) {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
     &__title {
       font-size: 22px;
       text-align: center;
@@ -33,12 +50,16 @@
     .button-blue {
       text-align: center;
       font-size: 16px;
+
       &:hover {
         font-size: 18px;
       }
     }
   }
   &__video {
+    @include breakpoint(tablet) {
+      align-self: center;
+    }
     iframe {
       max-width: 100%;
       border-radius: 20px;
@@ -48,6 +69,13 @@
 
 .ingles-metodo {
   margin-bottom: 50px;
+  .container {
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
+  }
   &__item {
     display: flex;
     flex-direction: column;
@@ -77,6 +105,11 @@
     flex-direction: column;
     gap: 50px;
     align-items: center;
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      align-items: center;
+    }
   }
 
   &__content {

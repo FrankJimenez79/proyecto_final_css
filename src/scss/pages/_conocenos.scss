@@ -1,0 +1,127 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.conocenos-hero {
+  margin-bottom: 50px;
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__content {
+    &__subtitle {
+      font-family: $secondary-font;
+      text-transform: uppercase;
+      color: $blue;
+      margin-bottom: 20px;
+    }
+    &__title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    &__list {
+      text-align: start;
+      padding-left: 50px;
+      margin-bottom: 20px;
+      li {
+        font-family: $secondary-font;
+      }
+    }
+    &__description {
+      font-family: $secondary-font;
+      margin-bottom: 20px;
+      &:last-of-type {
+        font-weight: 900;
+      }
+    }
+
+    .button-blue {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      &:hover {
+        font-size: 18px;
+      }
+    }
+  }
+  &__image {
+    img {
+      max-width: 100%;
+      box-shadow: 0px 8px 20px rgba(108, 165, 176, 0.4);
+      border-radius: 20px;
+    }
+  }
+}
+
+.conocenos-metodo {
+  margin-bottom: 50px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 50px;
+    @include breakpoint(desktop) {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      gap: 100px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    &__title {
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 18px;
+      font-family: $secondary-font;
+    }
+    &__subtitle {
+      font-family: $secondary-font;
+    }
+    &__logo {
+      width: 100px;
+    }
+  }
+}
+
+.conocenos-action {
+  margin-bottom: 30px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  &__title {
+    font-size: 28px;
+    color: $blue;
+    font-weight: 900;
+  }
+  &__subtitle {
+    font-family: $secondary-font;
+    font-size: 16px;
+  }
+  .button-blue {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    &:hover {
+      font-size: 18px;
+    }
+  }
+}
